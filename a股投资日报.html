@@ -3,155 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A股投资日报 - 2026年2月4日</title>
+    <title>A股投资日报 - $(date +"%Y年%m月%d日")</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8fafc;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .header .date {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .nav {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .nav a {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-        
-        .nav a:hover {
-            transform: scale(1.05);
-        }
-        
-        .content {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .section h2 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        .section h3 {
-            color: #34495e;
-            font-size: 1.3rem;
-            margin: 20px 0 15px 0;
-        }
-        
-        .highlight {
-            background: #e8f4fd;
-            border-left: 4px solid #667eea;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        
-        .warning {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        
-        .stock-list {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-        
-        .stock-item {
-            margin: 10px 0;
-            padding: 10px;
-            background: white;
-            border-radius: 5px;
-            border-left: 3px solid #667eea;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 10px;
-            color: #7f8c8d;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .header {
-                padding: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header .date { font-size: 1.1rem; opacity: 0.9; }
+        .nav { text-align: center; margin-bottom: 30px; }
+        .nav a { display: inline-block; background: #667eea; color: white; text-decoration: none; padding: 10px 20px; border-radius: 25px; margin: 0 10px; transition: transform 0.3s ease; }
+        .nav a:hover { transform: scale(1.05); }
+        .content { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section { margin-bottom: 40px; }
+        .section h2 { color: #2c3e50; font-size: 1.8rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .section h3 { color: #34495e; font-size: 1.3rem; margin: 20px 0 15px 0; }
+        .highlight { background: #e8f4fd; border-left: 4px solid #667eea; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .footer { text-align: center; margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 10px; color: #7f8c8d; }
+        @media (max-width: 768px) { .container { padding: 10px; } .header { padding: 20px; } .header h1 { font-size: 2rem; } .content { padding: 20px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📈 A股投资日报</h1>
-            <div class="date">2026年2月4日 - 科技板块分析</div>
+            <div class="date">$(date +"%Y年%m月%d日") - 科技板块分析</div>
         </div>
         
         <div class="nav">
@@ -162,106 +39,42 @@
         <div class="content">
             <div class="section">
                 <h2>📊 今日市场概览</h2>
-                
-                <h3>主要指数表现</h3>
                 <div class="highlight">
-                    <ul>
-                        <li><strong>上证指数</strong>：微涨0.13%，表现相对稳定</li>
-                        <li><strong>深证成指</strong>：下跌0.83%，受科技股拖累</li>
-                        <li><strong>创业板指</strong>：跌幅扩大至2%，科技股调整明显</li>
-                        <li><strong>科创50指数</strong>：跌幅扩大至2%，现报1441.57点</li>
-                    </ul>
+                    <p>正在获取最新市场数据...</p>
+                    <p>📈 主要指数表现分析中...</p>
+                    <p>💰 市场成交情况统计中...</p>
                 </div>
-                
-                <h3>市场成交</h3>
-                <p>沪深京三市成交额超5000亿元，较上日此时放量170亿元，预计全天成交金额约2.6万亿元。市场活跃度保持较高水平。</p>
             </div>
             
             <div class="section">
                 <h2>🔥 科技板块动态</h2>
-                
-                <h3>1. AI算力硬件板块调整</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>表现</strong>：AI算力硬件、AI应用板块跌幅居前<br>
-                        <strong>具体个股</strong>：新易盛、中际旭创跌超5%，寒武纪跌超3%，海光信息、中芯国际跟跌<br>
-                        <strong>港股影响</strong>：港股AIGC概念股集体下挫，美图公司跌超10%
-                    </div>
-                </div>
-                <div class="warning">
-                    <strong>分析</strong>：短期调整或为获利回吐，但长期逻辑依然强劲
-                </div>
-                
-                <h3>2. 半导体板块分化</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>存储芯片</strong>：表现疲软 - 深康佳A跌停，普冉股份、澜起科技、佰维存储、香农芯创纷纷低开
-                    </div>
-                    <div class="stock-item">
-                        <strong>其他半导体</strong>：跟随大盘调整 - 中芯国际等龙头个股跟跌
-                    </div>
-                </div>
-                
-                <h3>3. 光纤概念股活跃</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>表现</strong>：盘初表现强势<br>
-                        <strong>个股</strong>：特发信息、杭电股份涨停，凯旺科技涨超10%，全信股份、长盈通、太辰光、华脉科技、唯科科技跟涨<br>
-                        <strong>驱动因素</strong>：北美CSP资本开支指引乐观，光纤光缆行业已转向量价齐升
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>🚀 热门赛道分析</h2>
-                
-                <h3>算力板块</h3>
                 <div class="highlight">
-                    <strong>现状</strong>：短期调整，但基本面依然强劲<br>
-                    <strong>投资逻辑</strong>：AI大模型训练需求持续增长、国产算力替代进程加速、政策支持力度不断加大<br>
-                    <strong>关注标的</strong>：寒武纪、海光信息、景嘉微等
+                    <p>🤖 AI算力硬件板块分析中...</p>
+                    <p>💾 半导体板块动态追踪中...</p>
+                    <p>🔌 光纤概念股表现监控中...</p>
                 </div>
-                
-                <h3>ChatGPT概念</h3>
-                <p><strong>港股表现</strong>：相关概念股集体下挫 - 美图公司跌超10%，智谱、MINIMAX-WP跌超5%，金山云、腾讯控股、阿里巴巴-W跟跌</p>
-                <div class="warning"><strong>投资策略</strong>：短期调整提供布局机会，关注真正有技术实力的公司</div>
             </div>
             
             <div class="section">
                 <h2>🎯 投资建议</h2>
-                
-                <h3>短期策略（1-2周）</h3>
                 <div class="warning">
-                    <ul>
-                        <li><strong>谨慎观望</strong>：等待市场企稳信号</li>
-                        <li><strong>精选个股</strong>：关注业绩确定性强的标的</li>
-                        <li><strong>控制仓位</strong>：保持适度谨慎</li>
-                    </ul>
-                </div>
-                
-                <h3>中期策略（1-3个月）</h3>
-                <div class="highlight">
-                    <ul>
-                        <li><strong>逢低布局</strong>：优质科技股调整机会</li>
-                        <li><strong>关注政策</strong>：把握政策红利释放</li>
-                        <li><strong>业绩为王</strong>：重视基本面研究</li>
-                    </ul>
+                    <p><strong>温馨提示</strong>: 详细的投资分析需要获取实时市场数据，请稍等片刻...</p>
                 </div>
             </div>
             
             <div class="section">
                 <h2>⚠️ 风险提示</h2>
                 <div class="warning">
-                    <p><strong>市场风险</strong>：政策风险、技术风险、竞争风险</p>
-                    <p><strong>个股风险</strong>：业绩不及预期、大股东减持、行业周期</p>
-                    <p><strong>系统性风险</strong>：全球经济形势、地缘政治风险、流动性风险</p>
+                    <p><strong>市场风险</strong>: 政策风险、技术风险、竞争风险</p>
+                    <p><strong>个股风险</strong>: 业绩不及预期、大股东减持、行业周期</p>
+                    <p><strong>系统性风险</strong>: 全球经济形势、地缘政治风险、流动性风险</p>
                 </div>
             </div>
         </div>
         
         <div class="footer">
             <p>免责声明：本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
-            <p>报告生成时间：2026年2月4日 09:00 UTC | 下次报告时间：2026年2月5日 09:00 UTC</p>
+            <p>报告生成时间：$(date +"%Y年%m月%d日 %H:%M") UTC</p>
         </div>
     </div>
 </body>
