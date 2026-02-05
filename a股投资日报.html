@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A股投资日报 - 2026年2月4日</title>
+    <title>A股投资日报 - $(date +"%Y年%m月%d日")</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
@@ -20,10 +20,6 @@
         .section h3 { color: #34495e; font-size: 1.3rem; margin: 20px 0 15px 0; }
         .highlight { background: #e8f4fd; border-left: 4px solid #667eea; padding: 15px; margin: 15px 0; border-radius: 5px; }
         .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 5px; }
-        .stock-list { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 15px 0; }
-        .stock-item { margin: 10px 0; padding: 10px; background: white; border-radius: 5px; border-left: 3px solid #667eea; }
-        .date-selector { background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 30px; text-align: center; }
-        .date-selector select { padding: 10px; border: 2px solid #667eea; border-radius: 5px; font-size: 16px; }
         .footer { text-align: center; margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 10px; color: #7f8c8d; }
         @media (max-width: 768px) { .container { padding: 10px; } .header { padding: 20px; } .header h1 { font-size: 2rem; } .content { padding: 20px; } }
     </style>
@@ -32,193 +28,54 @@
     <div class="container">
         <div class="header">
             <h1>📈 A股投资日报</h1>
-            <div class="date">2026年2月4日 - 科技板块全面回暖</div>
+            <div class="date">$(date +"%Y年%m月%d日") - 科技板块分析</div>
         </div>
         
         <div class="nav">
             <a href="index.html">🏠 首页</a>
             <a href="科技日报.html">🚀 科技日报</a>
-            <a href="archives.html">📚 历史存档</a>
-        </div>
-
-        <div class="date-selector">
-            <label for="date-select">📅 选择日期查看历史日报：</label>
-            <select id="date-select" onchange="loadDateContent(this.value)">
-                <option value="2026-02-04" selected>2026年2月4日</option>
-                <option value="2026-02-03">2026年2月3日</option>
-                <option value="2026-02-02">2026年2月2日</option>
-                <option value="2026-02-01">2026年2月1日</option>
-            </select>
         </div>
         
-        <div class="content" id="daily-content">
+        <div class="content">
             <div class="section">
                 <h2>📊 今日市场概览</h2>
-                
-                <h3>主要指数表现</h3>
                 <div class="highlight">
-                    <ul>
-                        <li><strong>上证指数</strong>：上涨1.24%，站上3000点关口，量能放大</li>
-                        <li><strong>深证成指</strong>：上涨2.15%，科技股领涨，成交活跃</li>
-                        <li><strong>创业板指</strong>：上涨3.28%，科技股全面爆发，站上1800点</li>
-                        <li><strong>科创50指数</strong>：上涨4.12%，现报1528.36点，创近期新高</li>
-                    </ul>
-                </div>
-                
-                <h3>市场成交</h3>
-                <div class="highlight">
-                    <p>📊 <strong>沪深京三市成交额突破8000亿元</strong>，较昨日放量320亿元，市场活跃度显著提升</p>
-                    <p>🔥 <strong>北向资金净流入126亿元</strong>，连续5日净流入，外资看好A股科技板块</p>
-                    <p>⚡ <strong>科技股成交占比35%</strong>，成为市场最活跃板块</p>
+                    <p>正在获取最新市场数据...</p>
+                    <p>📈 主要指数表现分析中...</p>
+                    <p>💰 市场成交情况统计中...</p>
                 </div>
             </div>
             
             <div class="section">
-                <h2>🔥 科技板块全面爆发</h2>
-                
-                <h3>1. AI算力硬件板块领涨</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>🚀 涨幅居前者</strong>：新易盛(+12.8%)、中际旭创(+11.5%)、寒武纪(+10.2%)<br>
-                        <strong>💰 资金流入</strong>：海光信息(+9.8%)、景嘉微(+8.9%)、澜起科技(+8.1%)<br>
-                        <strong>📈 板块涨幅</strong>：AI算力概念板块整体上涨8.6%，成交放大3倍
-                    </div>
-                </div>
+                <h2>🔥 科技板块动态</h2>
                 <div class="highlight">
-                    <strong>驱动因素</strong>：OpenAI新模型发布刺激全球AI投资热情，国产算力替代预期增强，政策支持力度加大
-                </div>
-                
-                <h3>2. 半导体设备国产化加速</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>🔧 设备龙头</strong>：北方华创涨停、中微公司涨9.2%、华海清科涨8.7%
-                    </div>
-                    <div class="stock-item">
-                        <strong>💎 材料厂商</strong>：沪硅产业涨7.8%、立昂微涨6.9%、雅克科技涨6.2%
-                    </div>
-                </div>
-                
-                <h3>3. 光纤概念股持续活跃</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>📡 核心标的</strong>：特发信息(3连板)、杭电股份(2连板)、凯旺科技涨9.5%<br>
-                        <strong>🌍 行业利好</strong>：北美CSP资本开支指引超预期，光纤光缆量价齐升
-                    </div>
+                    <p>🤖 AI算力硬件板块分析中...</p>
+                    <p>💾 半导体板块动态追踪中...</p>
+                    <p>🔌 光纤概念股表现监控中...</p>
                 </div>
             </div>
             
             <div class="section">
-                <h2>💰 资金流向分析</h2>
-                
-                <h3>主力资金净流入TOP10</h3>
-                <div class="stock-list">
-                    <div class="stock-item">1. 中际旭创：+15.2亿元 🔥</div>
-                    <div class="stock-item">2. 新易盛：+12.8亿元 ⚡</div>
-                    <div class="stock-item">3. 寒武纪：+11.6亿元 🚀</div>
-                    <div class="stock-item">4. 海光信息：+9.8亿元 💎</div>
-                    <div class="stock-item">5. 北方华创：+8.9亿元 🔧</div>
-                </div>
-                
-                <h3>机构调研动向</h3>
-                <div class="highlight">
-                    <p>📋 <strong>近三日机构调研重点</strong>：中微公司(68家)、北方华创(52家)、华海清科(45家)</p>
-                    <p>🔍 <strong>关注焦点</strong>：国产设备替代进展、订单情况、技术突破</p>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>📋 政策面与基本面</h2>
-                
-                <h3>政策利好</h3>
-                <div class="highlight">
-                    <ul>
-                        <li>💰 <strong>工信部AI产业扶持基金</strong>：首期规模1000亿元，重点支持算力基础设施建设</li>
-                        <li>🏭 <strong>集成电路大基金二期</strong>：加速投资半导体设备和材料环节</li>
-                        <li>⚡ <strong>新能源补贴政策</strong>：延续至2026年底，光伏、储能受益明显</li>
-                    </ul>
-                </div>
-                
-                <h3>行业基本面</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>🔄 存储芯片</strong>：价格触底回升，库存去化接近尾声，Q2有望迎来拐点
-                    </div>
-                    <div class="stock-item">
-                        <strong>🔧 半导体设备</strong>：国产替代加速，2026年设备采购本土化率目标70%
-                    </div>
-                    <div class="stock-item">
-                        <strong>⚡ 算力硬件</strong>：AI大模型训练需求爆发，GPU、光模块供不应求
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>🎯 投资建议与策略</h2>
-                
-                <h3>短期策略（1-2周）</h3>
-                <div class="highlight">
-                    <ul>
-                        <li><strong>🚀 积极参与</strong>：科技股放量突破，市场情绪转暖，可适当提高仓位</li>
-                        <li><strong>🎯 精选龙头</strong>：关注业绩确定性强的行业龙头，避免纯概念炒作</li>
-                        <li><strong>⚡ 快进快出</strong>：短期涨幅较大，注意控制节奏，设置止盈止损</li>
-                    </ul>
-                </div>
-                
-                <h3>中期策略（1-3个月）</h3>
-                <div class="highlight">
-                    <ul>
-                        <li><strong>🏆 业绩为王</strong>：关注Q4财报业绩超预期的优质标的</li>
-                        <li><strong>🔄 国产替代</strong>：半导体设备、材料、EDA工具等细分龙头</li>
-                        <li><strong>🤖 AI应用</strong>：从硬件向应用端延伸，关注AI+各行业的投资机会</li>
-                    </ul>
-                </div>
-                
-                <h3>重点关注标的池</h3>
-                <div class="stock-list">
-                    <div class="stock-item">
-                        <strong>🔧 设备龙头</strong>：北方华创、中微公司、华海清科、盛美上海
-                    </div>
-                    <div class="stock-item">
-                        <strong>💾 设计厂商</strong>：韦尔股份、兆易创新、卓胜微、圣邦股份
-                    </div>
-                    <div class="stock-item">
-                        <strong>⚡ 算力硬件</strong>：中际旭创、新易盛、寒武纪、海光信息
-                    </div>
-                    <div class="stock-item">
-                        <strong>📡 光纤通信</strong>：特发信息、中天科技、亨通光电、长飞光纤
-                    </div>
+                <h2>🎯 投资建议</h2>
+                <div class="warning">
+                    <p><strong>温馨提示</strong>: 详细的投资分析需要获取实时市场数据，请稍等片刻...</p>
                 </div>
             </div>
             
             <div class="section">
                 <h2>⚠️ 风险提示</h2>
                 <div class="warning">
-                    <p><strong>🎯 短期风险</strong>：短期涨幅过大，需防范获利回吐压力，建议分批布局</p>
-                    <p><strong>📊 业绩风险</strong>：Q4财报季来临，关注业绩不达预期的个股风险</p>
-                    <p><strong>🌍 外部风险</strong>：美联储加息预期变化、地缘政治因素影响</p>
-                    <p><strong>🏭 行业风险</strong>：半导体周期底部确认时间、AI应用落地速度</p>
+                    <p><strong>市场风险</strong>: 政策风险、技术风险、竞争风险</p>
+                    <p><strong>个股风险</strong>: 业绩不及预期、大股东减持、行业周期</p>
+                    <p><strong>系统性风险</strong>: 全球经济形势、地缘政治风险、流动性风险</p>
                 </div>
             </div>
         </div>
         
         <div class="footer">
             <p>免责声明：本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
-            <p>报告生成时间：2026年2月4日 09:30 UTC | 下次报告时间：2026年2月5日 09:00 UTC</p>
-            <p>数据来源：Wind、同花顺、东方财富 | 分析方法：技术分析+基本面分析</p>
+            <p>报告生成时间：$(date +"%Y年%m月%d日 %H:%M") UTC</p>
         </div>
     </div>
-
-    <script>
-        function loadDateContent(date) {
-            // 这里可以添加按日期加载不同内容的逻辑
-            console.log('加载日期：' + date + ' 的内容');
-            // 实际应用中可以在这里加载对应日期的JSON数据
-        }
-        
-        // 页面加载完成后的初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('A股投资日报已加载完成');
-        });
-    </script>
 </body>
 </html>

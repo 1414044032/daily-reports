@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史存档 - Daily Reports</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.1rem; opacity: 0.9; }
+        .nav { text-align: center; margin-bottom: 30px; }
+        .nav a { display: inline-block; background: #667eea; color: white; text-decoration: none; padding: 10px 20px; border-radius: 25px; margin: 0 10px; transition: transform 0.3s ease; }
+        .nav a:hover { transform: scale(1.05); }
+        
+        .archive-section { background: white; border-radius: 15px; padding: 40px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .archive-section h2 { color: #2c3e50; font-size: 1.8rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        
+        .month-group { margin-bottom: 30px; }
+        .month-title { color: #34495e; font-size: 1.4rem; margin-bottom: 15px; font-weight: 600; }
+        
+        .report-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        .report-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .report-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .report-date {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .report-title {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .report-summary {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .report-tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .stats-bar {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header { padding: 20px; }
+            .header h1 { font-size: 2rem; }
+            .archive-section { padding: 20px; }
+            .stats-bar { flex-direction: column; }
+            .report-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 历史存档</h1>
+            <div class="subtitle">每日A股投资日报与科技资讯归档</div>
+        </div>
+        
+        <div class="nav">
+            <a href="index.html">🏠 首页</a>
+            <a href="a股投资日报.html">📈 A股投资日报</a>
+            <a href="科技日报.html">🚀 科技日报</a>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">30</div>
+                <div class="stat-label">本月报告数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">365</div>
+                <div class="stat-label">年度报告数</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2</div>
+                <div class="stat-label">报告类型</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">更新率</div>
+            </div>
+        </div>
+        
+        <div class="archive-section">
+            <h2>📈 A股投资日报存档</h2>
+            
+            <div class="month-group">
+                <div class="month-title">2026年2月</div>
+                <div class="report-list">
+                    <div class="report-card" onclick="window.open('a股投资日报.html?date=2026-02-04', '_self')">
+                        <div class="report-date">2026年2月4日</div>
+                        <div class="report-title">科技股全面爆发，科创50涨超4%</div>
+                        <div class="report-summary">AI算力板块领涨，半导体设备国产化加速，创业板指大涨3.28%，市场成交额突破8000亿。</div>
+                        <div class="report-tags">
+                            <span class="tag">AI算力</span>
+                            <span class="tag">半导体</span>
+                            <span class="tag">科技股</span>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-date">2026年2月3日</div>
+                        <div class="report-title">市场震荡反弹，光伏储能领涨</div>
+                        <div class="report-summary">新能源板块表现活跃，宁德时代、隆基绿能等龙头个股大涨，北向资金持续净流入。</div>
+                        <div class="report-tags">
+                            <span class="tag">新能源</span>
+                            <span class="tag">光伏</span>
+                            <span class="tag">储能</span>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-date">2026年2月2日</div>
+                        <div class="report-title">节前效应显现，成交相对清淡</div>
+                        <div class="report-summary">春节前最后一个交易日，市场交投清淡，科技板块个股分化，关注节后行情。</div>
+                        <div class="report-tags">
+                            <span class="tag">节前效应</span>
+                            <span class="tag">成交清淡</span>
+                            <span class="tag">个股分化</span>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-date">2026年2月1日</div>
+                        <div class="report-title">一月收官，科技板块调整</div>
+                        <div class="report-summary">1月最后一个交易日，科技板块整体调整，但北向资金持续净流入，显示外资对A股长期看好。</div>
+                        <div class="report-tags">
+                            <span class="tag">月度收官</span>
+                            <span class="tag">科技调整</span>
+                            <span class="tag">北向资金</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="month-group">
+                <div class="month-title">2026年1月</div>
+                <div class="report-list">
+                    <div class="report-card">
+                        <div class="report-date">2026年1月31日</div>
+                        <div class="report-title">月末调整，布局良机</div>
+                        <div class="report-summary">月末资金压力导致市场调整，但为2月行情提供布局良机，重点关注业绩超预期的科技股。</div>
+                        <div class="report-tags">
+                            <span class="tag">月末调整</span>
+                            <span class="tag">布局良机</span>
+                            <span class="tag">业绩超预期</span>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-date">2026年1月15日</div>
+                        <div class="report-title">业绩预告密集发布</div>
+                        <div class="report-summary">年报业绩预告密集发布，科技股分化明显，关注业绩确定性强的优质标的。</div>
+                        <div class="report-tags">
+                            <span class="tag">业绩预告</span>
+                            <span class="tag">业绩分化</span>
+                            <span class="tag">优质标的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="archive-section">
+            <h2>🚀 科技日报存档</h2>
+            
+            <div class="month-group">
+                <div class="month-title">2026年2月</div>
+                <div class="report-list">
+                    <div class="report-card" onclick="window.open('科技日报.html?date=2026-02-04', '_self')">
+                        <div class="report-date">2026年2月4日</div>
+                        <div class="report-title">GPT-5发布，AI算力需求爆发</div>
+                        <div class="report-summary">OpenAI发布GPT-5预览版，台积电3nm工艺突破，宁德时代电池技术革新，科技巨头动态频繁。</div>
+                        <div class="report-tags">
+                            <span class="tag">GPT-5</span>
+                            <span class="tag">台积电</span>
+                            <span class="tag">宁德时代</span>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-date">2026年2月3日</div>
+                        <div class="report-title">量子计算新进展，商业航天加速</div>
+                        <div class="report-summary">IBM量子计算机取得新突破，SpaceX星链用户超200万，生物技术CRISPR疗法进入临床。</div>
+                        <div class="report-tags">
+                            <span class="tag">量子计算</span>
+                            <span class="tag">商业航天</span>
+                            <span class="tag">生物技术</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📊 数据统计截止到最新更新 | 🔄 每日9:00自动更新（工作日）</p>
+            <p>💾 所有历史数据均已保存，支持按日期精确查询</p>
+        </div>
+    </div>
+
+    <script>
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('历史存档页面已加载完成');
+            
+            // 为报告卡片添加点击效果
+            const reportCards = document.querySelectorAll('.report-card');
+            reportCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-3px)';
+                    }, 100);
+                });
+            });
+        });
+        
+        // 日期选择器功能
+        function loadDateContent(date) {
+            console.log('加载日期：' + date + ' 的历史内容');
+            // 实际应用中可以在这里加载对应日期的详细内容
+        }
+    </script>
+</body>
+</html>
