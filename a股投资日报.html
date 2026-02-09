@@ -3,369 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📈 A股投资日报 - 2026年02月08日</title>
+    <title>A股投资日报 - $(date +"%Y年%m月%d日")</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; 
-            line-height: 1.7; 
-            color: #333; 
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        .header { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            color: white; 
-            padding: 30px; 
-            border-radius: 15px; 
-            margin-bottom: 30px; 
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        .header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 15px; margin-bottom: 30px; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .header .date { font-size: 1.1rem; opacity: 0.9; }
         .nav { text-align: center; margin-bottom: 30px; }
-        .nav a { 
-            display: inline-block; 
-            background: #667eea; 
-            color: white; 
-            text-decoration: none; 
-            padding: 12px 24px; 
-            border-radius: 25px;
-            margin: 0 10px; 
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-        .nav a:hover { 
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-        .content { 
-            background: white; 
-            border-radius: 15px; 
-            padding: 40px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        .section { margin-bottom: 30px; }
-        .section h1 { 
-            color: #2c3e50; 
-            font-size: 2rem; 
-            margin-bottom: 25px; 
-            padding-bottom: 15px; 
-            border-bottom: 3px solid #667eea;
-            text-align: center;
-        }
-        .section h2 { 
-            color: #34495e; 
-            font-size: 1.5rem; 
-            margin: 25px 0 15px 0; 
-            padding-bottom: 8px;
-            border-bottom: 2px solid #ecf0f1;
-        }
-        .section h3 { 
-            color: #34495e; 
-            font-size: 1.2rem; 
-            margin: 20px 0 12px 0; 
-            color: #667eea;
-        }
-        .highlight { 
-            background: linear-gradient(135deg, #e8f4fd 0%, #f0f8ff 100%); 
-            border-left: 4px solid #667eea; 
-            padding: 20px; 
-            margin: 20px 0; 
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .warning { 
-            background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%); 
-            border-left: 4px solid #ffc107; 
-            padding: 20px; 
-            margin: 20px 0; 
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .footer { 
-            text-align: center; 
-            padding: 25px; 
-            background: rgba(255,255,255,0.95); 
-            border-radius: 15px; 
-            color: #7f8c8d;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        .emoji { font-size: 1.2em; margin-right: 5px; }
-        strong { color: #2c3e50; font-weight: 600; }
-        em { color: #7f8c8d; font-style: italic; }
-        br { display: block; margin: 8px 0; }
-        @media (max-width: 768px) { 
-            .container { padding: 10px; } 
-            .header { padding: 20px; } 
-            .header h1 { font-size: 1.8rem; } 
-            .content { padding: 20px; }
-            .nav a { display: block; margin: 10px 0; }
-        }
-        .update-time {
-            text-align: center;
-            color: #95a5a6;
-            font-size: 0.9rem;
-            margin-top: 20px;
-        }
+        .nav a { display: inline-block; background: #667eea; color: white; text-decoration: none; padding: 10px 20px; border-radius: 25px; margin: 0 10px; transition: transform 0.3s ease; }
+        .nav a:hover { transform: scale(1.05); }
+        .content { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .section { margin-bottom: 40px; }
+        .section h2 { color: #2c3e50; font-size: 1.8rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .section h3 { color: #34495e; font-size: 1.3rem; margin: 20px 0 15px 0; }
+        .highlight { background: #e8f4fd; border-left: 4px solid #667eea; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .footer { text-align: center; margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.9); border-radius: 10px; color: #7f8c8d; }
+        @media (max-width: 768px) { .container { padding: 10px; } .header { padding: 20px; } .header h1 { font-size: 2rem; } .content { padding: 20px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📈 A股投资日报</h1>
-            <div class="date">2026年02月08日</div>
+            <div class="date">$(date +"%Y年%m月%d日") - 科技板块分析</div>
         </div>
         
         <div class="nav">
             <a href="index.html">🏠 首页</a>
             <a href="科技日报.html">🚀 科技日报</a>
-            <a href="archives.html">📚 历史存档</a>
         </div>
         
         <div class="content">
             <div class="section">
-                <h1>A股科技股投资日报</h1><br>
-<h2>2026年2月5日 | 第2026036期</h2><br>
-<br>
----<br>
-<br>
-<h2><span class="emoji">📈</span> <strong>科技板块整体走势回顾</strong></h2><br>
-<br>
-<h3>市场表现概览</h3><br>
-<strong>科技100指数<em>*: 报收3,245.67点，*</em>+1.24%</strong> (跑赢沪深300指数0.8个百分点)<br>
-<strong>成交额</strong>: 2,847亿元，较前日放大18.6%<br>
-<strong>涨跌比</strong>: 78:22，普涨格局明显<br>
-<br>
-<h3>资金流向</h3><br>
-• <strong>主力资金净流入</strong>: +156.8亿元 (连续3日净流入)<br>
-• <strong>北向资金</strong>: +43.2亿元 (重点配置AI算力板块)<br>
-• <strong>融资余额</strong>: 1,247亿元 (较前一交易日+2.1%)<br>
-<br>
----<br>
-<br>
-<h2><span class="emoji">🔍</span> <strong>细分领域动态</strong></h2><br>
-<br>
-<h3>💻 半导体板块 <strong>+2.36%</strong> ⭐⭐⭐⭐⭐</h3><br>
-<strong>领涨个股</strong>:<br>
-• 中微公司 +8.7% (刻蚀设备订单超预期)<br>
-• 韦尔股份 +6.3% (CIS芯片涨价预期)<br>
-• 兆易创新 +5.9% (Nor Flash供需改善)<br>
-<br>
-<strong>异动原因</strong>: 工信部数据显示2025年国内半导体设备国产化率提升至42%，市场信心增强<br>
-<br>
-<h3><span class="emoji">🤖</span> AI人工智能 <strong>+3.15%</strong> ⭐⭐⭐⭐⭐</h3><br>
-<strong>领涨个股</strong>:<br>
-• 科大讯飞 +9.8% (发布新一代大模型)<br>
-• 海康威视 +4.2% (AI应用场景拓展)<br>
-• 寒武纪 +7.1% (AI芯片需求旺盛)<br>
-<br>
-<strong>行业动态</strong>: 算力基础设施建设加速，多地发布AI产业发展规划<br>
-<br>
-<h3><span class="emoji">🔋</span> 新能源 <strong>-0.87%</strong> ⭐⭐</h3><br>
-<strong>表现分化</strong>:<br>
-• 宁德时代 -2.1% (电池价格战担忧)<br>
-• 隆基绿能 +1.3% (硅片价格企稳)<br>
-• 阳光电源 -1.8% (逆变器竞争加剧)<br>
-<br>
-<strong>影响因素</strong>: 锂电池产能过剩担忧，但光伏产业链出现企稳迹象<br>
-<br>
-<h3><span class="emoji">📱</span> 消费电子 <strong>+0.56%</strong> ⭐⭐⭐</h3><br>
-<strong>个股表现</strong>:<br>
-• 立讯精密 +3.4% (苹果链订单稳定)<br>
-• 歌尔股份 +2.1% (VR业务恢复增长)<br>
-• 工业富联 -1.2% (服务器需求波动)<br>
-<br>
-<strong>行业亮点</strong>: 折叠屏手机、AI PC等新产品推动创新需求<br>
-<br>
-<h3>💿 软件服务 <strong>+1.87%</strong> ⭐⭐⭐⭐</h3><br>
-<strong>强势个股</strong>:<br>
-• 用友网络 +6.2% (企业数字化转型)<br>
-• 金山办公 +4.8% (AI功能升级)<br>
-• 中国软件 +5.1% (信创政策催化)<br>
-<br>
----<br>
-<br>
-<h2><span class="emoji">🚀</span> <strong>热门赛道分析</strong></h2><br>
-<br>
-<h3>算力概念 <strong>+4.23%</strong> 🔥🔥🔥🔥🔥</h3><br>
-<strong>核心驱动</strong>: 工信部全面开展算力监测工作，国家算力基础设施投资加码<br>
-<strong>重点标的</strong>: <br>
-• 中科曙光 +8.9% (超级计算机龙头)<br>
-• 浪潮信息 +7.2% (服务器市场份额提升)<br>
-• 新易盛 +6.8% (光模块需求旺盛)<br>
-<br>
-<strong>投资建议</strong>: 政策红利持续释放，关注具备核心技术优势的标的<br>
-<br>
-<h3>ChatGPT概念 <strong>+3.78%</strong> 🔥🔥🔥🔥</h3><br>
-<strong>催化因素</strong>: 国内多家公司发布大模型产品，商业化进程加速<br>
-<strong>活跃个股</strong>:<br>
-• 三六零 +8.1% (自研大模型发布)<br>
-• 昆仑万维 +6.4% (AI应用落地)<br>
-• 拓尔思 +5.7% (NLP技术领先)<br>
-<br>
-<strong>风险提示</strong>: 关注技术商业化进展，避免纯概念炒作<br>
-<br>
-<h3>自动驾驶 <strong>+2.91%</strong> 🔥🔥🔥🔥</h3><br>
-<strong>政策利好</strong>: 《汽车数据出境安全指引》发布，为行业发展提供规范<br>
-<strong>受益标的</strong>:<br>
-• 德赛西威 +7.3% (智能驾驶舱龙头)<br>
-• 中科创达 +5.8% (操作系统提供商)<br>
-• 四维图新 +4.2% (高精度地图)<br>
-<br>
-<h3>光伏储能 <strong>+0.45%</strong> 🔥🔥</h3><br>
-<strong>分化明显</strong>: 储能强于光伏<br>
-• 宁德时代 -2.1% (电池价格战)<br>
-• 阳光电源 -1.8% (逆变器竞争)<br>
-+ 科士达 +3.2% (储能变流器)<br>
-+ 国轩高科 +1.9% (储能电池)<br>
-<br>
----<br>
-<br>
-<h2>🏛️ <strong>政策面影响</strong></h2><br>
-<br>
-<h3>利好政策</h3><br>
-1. <strong>工信部算力监测政策</strong>: 全面开展算力态势感知自动化监测工作，利好整个算力产业链<br>
-2. <strong>汽车数据安全指引</strong>: 为自动驾驶数据跨境流动提供规范，促进行业健康发展<br>
-3. <strong>零碳工厂建设意见</strong>: 五部门联合推进零碳工厂建设，利好新能源和节能环保板块<br>
-<br>
-<h3>政策预期</h3><br>
-• 国家大基金三期即将启动，半导体板块预期增强<br>
-• AI产业扶持政策有望陆续出台<br>
-• 新能源汽车补贴政策延续概率较大<br>
-<br>
----<br>
-<br>
-<h2><span class="emoji">📊</span> <strong>技术面分析</strong></h2><br>
-<br>
-<h3>主要科技指数</h3><br>
-<strong>科技100指数</strong>:<br>
-• 日K线: 站上5日、10日、20日均线，形成多头排列<br>
-• MACD: 金叉状态，红柱放大<br>
-• RSI: 62.3，处于强势区域<br>
-• <strong>关键点位</strong>: 支撑位3,180点，压力位3,320点<br>
-<br>
-<strong>半导体指数</strong>:<br>
-• 突破前期整理平台，量能配合良好<br>
-• 短期目标位: 上涨5-8%空间<br>
-<br>
-<h3>龙头股走势</h3><br>
-• <strong>中芯国际</strong>: 底部反弹形态，关注前高压力<br>
-• <strong>宁德时代</strong>: 区间震荡，等待方向选择<br>
-• <strong>科大讯飞</strong>: 上升通道完好，趋势延续<br>
-<br>
----<br>
-<br>
-<h2>📋 <strong>基本面变化</strong></h2><br>
-<br>
-<h3>重要业绩预告</h3><br>
-• <strong>韦尔股份</strong>: 2025年净利润预增45-65%，超预期<br>
-• <strong>兆易创新</strong>: Q4业绩环比改善，Nor Flash涨价效应显现<br>
-• <strong>用友网络</strong>: 云服务收入增长50%，转型成效显著<br>
-<br>
-<h3>重大公告</h3><br>
-• <strong>中微公司</strong>: 新签订单35亿元，同比增长120%<br>
-• <strong>科大讯飞</strong>: 与华为达成战略合作，共同开发AI大模型<br>
-• <strong>宁德时代</strong>: 与福特汽车合作推进，海外扩张加速<br>
-<br>
----<br>
-<br>
-<h2><span class="emoji">💡</span> <strong>投资机会提示</strong></h2><br>
-<br>
-<h3>短期机会 (1-2周)</h3><br>
-1. <strong>算力基础设施</strong>: 政策催化持续，关注服务器、光通信标的<br>
-2. <strong>半导体设备</strong>: 国产化加速，订单增长确定性强<br>
-3. <strong>AI应用</strong>: 商业化落地加速，业绩兑现概率高<br>
-<br>
-<h3>中期配置 (1-3个月)</h3><br>
-1. <strong>半导体材料</strong>: 国产替代空间巨大，技术突破可期<br>
-2. <strong>工业软件</strong>: 数字化转型需求旺盛，政策支持有力<br>
-3. <strong>储能板块</strong>: 成本下降推动需求增长，竞争格局优化<br>
-<br>
-<h3>长期布局 (6-12个月)</h3><br>
-1. <strong>AI芯片</strong>: 技术壁垒高，市场空间大<br>
-2. <strong>新能源新技术</strong>: 钠离子电池、氢储能等前沿技术<br>
-3. <strong>信创产业</strong>: 国家安全需要，替代空间广阔<br>
-<br>
----<br>
-<br>
-<h2><span class="emoji"><span class="emoji">⚠️</span></span> <strong>风险提示</strong></h2><br>
-<br>
-<h3>系统性风险</h3><br>
-• <strong>估值风险</strong>: 部分科技股估值仍偏高，需警惕回调压力<br>
-• <strong>流动性风险</strong>: 美联储货币政策变化可能影响全球流动性<br>
-• <strong>地缘政治风险</strong>: 科技领域贸易摩擦升级风险<br>
-<br>
-<h3>行业风险</h3><br>
-• <strong>技术迭代风险</strong>: 科技行业技术更新快，投资选择难度大<br>
-• <strong>竞争激烈风险</strong>: 部分细分领域竞争加剧，盈利能力承压<br>
-• <strong>政策变化风险</strong>: 监管政策变化可能影响行业发展<br>
-<br>
-<h3>个股风险</h3><br>
-• <strong>业绩兑现风险</strong>: 部分公司业绩承诺存在兑现压力<br>
-• <strong>股东减持风险</strong>: 需关注重要股东减持计划<br>
-• <strong>财务风险</strong>: 部分公司应收账款较高，需关注现金流状况<br>
-<br>
----<br>
-<br>
-<h2><span class="emoji">📈</span> <strong>明日关注重点</strong></h2><br>
-<br>
-<h3>重要数据</h3><br>
-• 美国1月非农就业数据 (21:30)<br>
-• 中国1月外汇储备数据 (待定)<br>
-<br>
-<h3>公司公告</h3><br>
-• 多家科技公司将发布月度经营数据<br>
-• 关注年报业绩预告集中披露期<br>
-<br>
-<h3>政策动向</h3><br>
-• 关注各地两会科技政策表态<br>
-• 工信部可能发布新的产业规划<br>
-<br>
----<br>
-<br>
-<h2>📝 <strong>操作建议</strong></h2><br>
-<br>
-<h3>激进型投资者</h3><br>
-• <strong>仓位建议</strong>: 70-80%<br>
-• <strong>重点关注</strong>: 算力、AI应用、半导体设备<br>
-• <strong>操作策略</strong>: 逢低布局强势板块龙头股<br>
-<br>
-<h3>稳健型投资者</h3><br>
-• <strong>仓位建议</strong>: 50-60%<br>
-• <strong>重点关注</strong>: 业绩确定性高的科技白马股<br>
-• <strong>操作策略</strong>: 分批建仓，控制回撤风险<br>
-<br>
-<h3>保守型投资者</h3><br>
-• <strong>仓位建议</strong>: 30-40%<br>
-• <strong>重点关注</strong>: 估值合理、分红稳定的科技股<br>
-• <strong>操作策略</strong>: 等待更好买点，重视风险控制<br>
-<br>
----<br>
-<br>
-<h2>📞 <strong>免责声明</strong></h2><br>
-<br>
-本报告基于公开信息编制，仅供参考，不构成投资建议。投资者应根据自身情况独立判断，并承担相应风险。股市有风险，投资需谨慎。<br>
-<br>
-<strong>报告编制</strong>: 2026年2月5日 21:30<br>
-<strong>数据来源</strong>: 公开市场信息整理<br>
-<strong>有效期</strong>: 本报告有效期为发布之日起5个交易日<br>
-<br>
----<br>
-<br>
-💼 <strong>投资顾问</strong>: 专业投研团队<br>
-📧 <strong>意见反馈</strong>: feedback@techstock-daily.com<br>
-🌐 <strong>更多资讯</strong>: www.techstock-daily.com<br>
+                <h2>📊 今日市场概览</h2>
+                <div class="highlight">
+                    <p>正在获取最新市场数据...</p>
+                    <p>📈 主要指数表现分析中...</p>
+                    <p>💰 市场成交情况统计中...</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔥 科技板块动态</h2>
+                <div class="highlight">
+                    <p>🤖 AI算力硬件板块分析中...</p>
+                    <p>💾 半导体板块动态追踪中...</p>
+                    <p>🔌 光纤概念股表现监控中...</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 投资建议</h2>
+                <div class="warning">
+                    <p><strong>温馨提示</strong>: 详细的投资分析需要获取实时市场数据，请稍等片刻...</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚠️ 风险提示</h2>
+                <div class="warning">
+                    <p><strong>市场风险</strong>: 政策风险、技术风险、竞争风险</p>
+                    <p><strong>个股风险</strong>: 业绩不及预期、大股东减持、行业周期</p>
+                    <p><strong>系统性风险</strong>: 全球经济形势、地缘政治风险、流动性风险</p>
+                </div>
             </div>
         </div>
         
         <div class="footer">
-            <p>本报告由AI自动生成，仅供参考，不构成投资建议。</p>
-            <p>投资有风险，入市需谨慎。</p>
-            <div class="update-time">最后更新时间：2026年02月08日 20:33:55</div>
+            <p>免责声明：本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
+            <p>报告生成时间：$(date +"%Y年%m月%d日 %H:%M") UTC</p>
         </div>
     </div>
 </body>
